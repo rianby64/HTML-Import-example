@@ -20,6 +20,15 @@
         ownerDoc.head.appendChild(link);
         link.addEventListener('load', (e) => {
           ownerDoc.body.appendChild(link.import.body);
+
+          var link1 = document.createElement('link');
+          link1.href = "nested/to-import-nested.html";
+          link1.rel = "import";
+
+          ownerDoc.head.appendChild(link1);
+          link1.addEventListener('load', (e) => {
+            ownerDoc.body.appendChild(link1.import.body);
+          });
         });
       })();
     </script>
