@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <div id="myId">
+      This is a text to import
+    </div>
+    <div id="a">
+      Another else
+    </div>
+    <script>
+      'use strict';
+      var adiv = document.currentScript.ownerDocument.querySelector('div#a');
+      adiv.style.backgroundColor = "green";
+    </script>
+  </body>
+  <head>
+    <script src="to-import.js"></script>
+  </head>
+</html>
