@@ -4,4 +4,4 @@ This is an example about how to use the mentioned technology. Bear in mind that 
 
 ## Atention
 
-Don't use this things at production. This is based on a draft. So, there's no guarranty that all will be implemented correctly.
+Don't use this thing at production. HTML-Imports is based on a draft. So, there's no guarranty that all they wrote will be implemented soon correctly in every browser or engine.
