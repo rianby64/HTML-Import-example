@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <div id="mythird">
+      This is my content
+    </div>
+    <div id="mgdiv">
+      This is another content
+    </div>
+  </body>
+  <head>
+    <script>
+      var ownerDoc = document.currentScript.ownerDocument;
+      var div = ownerDoc.querySelector('div#mgdiv');
+      div.style.backgroundColor = "orange";
+    </script>
+    <script src="to-import-flat.js"></script>
+  </head>
+</html>

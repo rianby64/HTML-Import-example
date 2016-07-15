@@ -2,12 +2,15 @@
   <body>
   </body>
   <script>
-    var link = document.createElement('link');
-    link.href = "folder/to-import.html";
-    link.rel = "import";
-    document.body.appendChild(link);
-    link.addEventListener('load', (e) => {
-      document.body.appendChild(link.import.body);
-    });
+    ;(_ => {
+      'use strict';
+      var link = document.createElement('link');
+      link.href = "folder/to-import.html";
+      link.rel = "import";
+      document.head.appendChild(link);
+      link.addEventListener('load', (e) => {
+        document.body.appendChild(link.import.body);
+      });
+    })();
   </script>
 </html>

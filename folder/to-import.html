@@ -1,15 +1,27 @@
 <html>
   <body>
-    <div id="myId">
+    <div id="myid">
       This is a text to import
     </div>
     <div id="anid">
       Another else
     </div>
     <script>
-      'use strict';
-      var adiv = document.currentScript.ownerDocument.querySelector('#anid');
-      adiv.style.backgroundColor = "green";
+      ;(_ => {
+        'use strict';
+        var ownerDoc = document.currentScript.ownerDocument;
+        var adiv = ownerDoc.querySelector('div#anid');
+        adiv.style.backgroundColor = "green";
+
+        var link = document.createElement('link');
+        link.href = "to-import-flat.html";
+        link.rel = "import";
+
+        ownerDoc.head.appendChild(link);
+        link.addEventListener('load', (e) => {
+          ownerDoc.body.appendChild(link.import.body);
+        });
+      })();
     </script>
   </body>
   <head>
